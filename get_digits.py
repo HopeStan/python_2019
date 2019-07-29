@@ -9,4 +9,4 @@ def get_digits(num):
   return return_tuple
 
  
-print(get_digits(1478963)
+print(get_digits(1478963))
