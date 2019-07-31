@@ -1,0 +1,2 @@
+def get_longest_word(input_string):
+    return max(input_string.split(' '))
