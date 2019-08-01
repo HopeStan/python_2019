@@ -1,0 +1,9 @@
+from typing import Optional, Set
+
+
+def apper_in_all(*args):
+    list_of_sets = [set(symbols) for symbols in args]
+    return list_of_sets[0].intersection(*list_of_sets[1:]) if list_of_sets else None
+
+
+print(apper_in_all("hello", "world", "python"))
