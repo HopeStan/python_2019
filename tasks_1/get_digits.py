@@ -10,3 +10,6 @@ def get_digits(num):
 
  
 print(get_digits(1478963))
+
+def get_digits(num)
+    return tuple(list(str(num)))
