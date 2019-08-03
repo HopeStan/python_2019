@@ -1,0 +1,19 @@
+def split_module(input_string, sep):
+    List_of_words, index = [], 0
+    while True:
+        found_index = input_string.find(sep, index)
+        if index == len(input_string):
+            break
+        elif sep == '':
+            List_of_words.append(input_string[index: found_index + 1])
+            index = found_index + 1
+        elif found_index == -1:
+            List_of_words.append(input_string[index: len(input_string)])
+            break
+        else:
+            List_of_words.append(input_string[index: found_index])
+            index = found_index + len(sep)
+    return List_of_words
+
+
+print(split_module('123 456 789 123456789', ' '))
