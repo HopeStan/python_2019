@@ -5,5 +5,10 @@ def apper_in_all(*args):
     list_of_sets = [set(symbols) for symbols in args]
     return list_of_sets[0].intersection(*list_of_sets[1:]) if list_of_sets else None
 
+def at_least_one(*args):
+    list_of_sets = [set(symbols) for symbols in args]
+    return list_of_sets[0].union(*list_of_sets[1:]) if list_of_sets else None
 
+
+print(at_least_one("hello", "world", "python"))
 print(apper_in_all("hello", "world", "python"))
