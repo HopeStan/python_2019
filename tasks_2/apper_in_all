@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+import string
 from typing import Optional, Set
 
 
@@ -8,7 +10,15 @@ def apper_in_all(*args):
 def at_least_one(*args):
     list_of_sets = [set(symbols) for symbols in args]
     return list_of_sets[0].union(*list_of_sets[1:]) if list_of_sets else None
+    
+def two_and_more(*args):
+    list_of_sets = [set(symbols) for symbols in args]
+    dictionary = {}
+    for item in list_of_sets:
+        for symbols in item:
+            dictionary[symbols] = dictionary.get(symbols, 0) + 1
+    return {key for key in dictionary if dictionary[key] > 1}
+    
+def left_in_alpf(*args):
+    return set(string.ascii_lowercase).difference(set().union(*args))
 
-
-print(at_least_one("hello", "world", "python"))
-print(apper_in_all("hello", "world", "python"))
