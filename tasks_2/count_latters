@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-def count_symbols(imput_string):
+def count_latters(imput_string):
     dictionary = {}
     for symbols in imput_string:
         dictionary[symbols] = dictionary.get(symbols, 0) + 1
