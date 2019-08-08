@@ -1,0 +1,5 @@
+def count_symbols(imput_string):
+    dictionary = {}
+    for symbols in imput_string:
+        dictionary[symbols] = dictionary.get(symbols, 0) + 1
+    return dictionary
